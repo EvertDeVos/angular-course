@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { AlbumComponent } from './albums/components';
+import { AlbumsService } from './albums/services/albums.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { AlbumComponent } from './albums/components';
     NgbModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AlbumsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
