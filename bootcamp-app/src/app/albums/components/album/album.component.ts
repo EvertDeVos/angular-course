@@ -1,12 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-
-interface Album {
-  title: string;
-  artist: string;
-  releaseDate: Date;
-  coverArt: string;
-  tracks: { order: number; title: string }[];
-}
+import { IAlbum } from '../../models';
 
 enum AlbumTabOption {
   None,
@@ -24,11 +17,11 @@ export class AlbumComponent {
 
   public currentTab: AlbumTabOption;
 
-  @Input() public album! : Album;
-  @Output() public albumChange :EventEmitter<Album>;
+  @Input() public album!: IAlbum;
+  @Output() public albumChange: EventEmitter<IAlbum>;
 
   public constructor() {
-    this.albumChange = new EventEmitter<Album>();
+    this.albumChange = new EventEmitter<IAlbum>();
     this.currentTab = AlbumTabOption.Info;
   }
 
@@ -36,7 +29,7 @@ export class AlbumComponent {
     this.currentTab = tab;
   }
 
-  public onAlbumChanges() : void {
+  public onAlbumChanges(): void {
     this.albumChange.emit(this.album);
   }
 }
