@@ -1,0 +1,18 @@
+{
+  "albums": [
+    {
+        "title": "The Dark Side of the Moon",
+        "artist": "Pink Floyd",
+        "releaseDate": "1973-04-23T23:00:00.000Z",
+        "coverArt":
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Optical-dispersion_%281%29.png/390px-Optical-dispersion_%281%29.png",
+        "tracks": [
+          { "order": 1, "title": "Speak to Me" },
+          { "order": 2, "title": "Breathe" },
+          { "order": 3, "title": "On the Run" },
+          { "order": 4, "title": "Time" },
+          { "order": 5, "title": "The Great Gig in the Sky" }
+        ]
+    }
+  ]
+}

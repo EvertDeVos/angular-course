@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start:app": "ng serve",
+    "start:server" : "json-server ./json-server/db.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
