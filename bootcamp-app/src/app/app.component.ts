@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
 
-enum TabOption {
-  None,
-  Info,
-  Tracks,
-}
 
 @Component({
   selector: 'app-root',
@@ -12,9 +7,7 @@ enum TabOption {
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  public TabOption = TabOption;
 
-  public currentTab: TabOption;
   public album = {
     title: 'The Dark Side of the Moon',
     artist: 'Pink Floyd',
@@ -29,12 +22,6 @@ export class AppComponent {
       { order: 5, title: 'The Great Gig in the Sky' },
     ],
   };
-
-  public constructor() {
-    this.currentTab = TabOption.Info;
-  }
-
-  public onSelectTab(tab : TabOption) :void {
-    this.currentTab = tab;
-  }
 }
+
+
