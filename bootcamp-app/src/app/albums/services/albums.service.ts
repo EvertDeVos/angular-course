@@ -17,5 +17,9 @@ export class AlbumsService {
   public getAlbums() : Observable<IAlbumResponse[]> {
     return this.httpClient.get<IAlbumResponse[]>(this.baseUrl);
   }
+
+  public getAlbum(id:number) : Observable<IAlbumResponse> {
+    return this.httpClient.get<IAlbumResponse>(`${this.baseUrl}/${id}`);
+  }
 }
 

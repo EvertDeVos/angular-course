@@ -1,0 +1,10 @@
+<div class="card mb-4">
+  <ng-container *ngIf="album">
+    <div class="card-header">
+      <h3>{{ album?.title }}</h3>
+    </div>
+    <div class="card-body">
+      <app-album [album]="album"></app-album>
+    </div>
+  </ng-container>
+</div>

@@ -1,4 +1,5 @@
 export interface IAlbumResponse {
+  id: number,
   title: string;
   artist: string;
   releaseDate: string;

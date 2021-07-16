@@ -1,6 +1,7 @@
 import { IAlbumResponse } from './album-response';
 
 export interface IAlbum {
+  id:number,
   title: string;
   artist: string;
   releaseDate: Date;
@@ -9,9 +10,10 @@ export interface IAlbum {
 }
 
 function fromResponse(response: IAlbumResponse): IAlbum {
-  const { title, artist, releaseDate, coverArt, tracks } = response;
+  const { id, title, artist, releaseDate, coverArt, tracks } = response;
 
   return {
+    id,
     title,
     artist,
     coverArt,

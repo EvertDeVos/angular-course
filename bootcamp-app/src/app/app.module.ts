@@ -9,11 +9,15 @@ import { AlbumComponent } from './albums/components';
 import { AlbumsService } from './albums/services/albums.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { OverviewComponent } from './albums/pages/overview/overview.component';
+import { DetailComponent } from './albums/pages/detail/detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlbumComponent
+    AlbumComponent,
+    OverviewComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,18 +1,31 @@
 {
   "albums": [
     {
-        "title": "The Dark Side of the Moon",
-        "artist": "Pink Floyd",
-        "releaseDate": "1973-04-23T23:00:00.000Z",
-        "coverArt":
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Optical-dispersion_%281%29.png/390px-Optical-dispersion_%281%29.png",
-        "tracks": [
-          { "order": 1, "title": "Speak to Me" },
-          { "order": 2, "title": "Breathe" },
-          { "order": 3, "title": "On the Run" },
-          { "order": 4, "title": "Time" },
-          { "order": 5, "title": "The Great Gig in the Sky" }
-        ]
+      "id": 1,
+      "title": "The Dark Side of the Moon",
+      "artist": "Pink Floyd",
+      "releaseDate": "1973-04-23T23:00:00.000Z",
+      "coverArt": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Optical-dispersion_%281%29.png/390px-Optical-dispersion_%281%29.png",
+      "tracks": [
+        { "order": 1, "title": "Speak to Me" },
+        { "order": 2, "title": "Breathe" },
+        { "order": 3, "title": "On the Run" },
+        { "order": 4, "title": "Time" },
+        { "order": 5, "title": "The Great Gig in the Sky" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Thriller",
+      "artist": "Michael Jackson",
+      "releaseDate": "1982-10-30T23:00:00.000Z",
+      "coverArt": "https://upload.wikimedia.org/wikipedia/en/thumb/5/55/Michael_Jackson_-_Thriller.png/220px-Michael_Jackson_-_Thriller.png",
+      "tracks": [
+        { "order": 1, "title": "Wanna Be Startin' Somethin" },
+        { "order": 2, "title": "Baby Be Mine" },
+        { "order": 3, "title": "The Girl Is Mine" },
+        { "order": 4, "title": "Thriller" }
+      ]
     }
   ]
 }
