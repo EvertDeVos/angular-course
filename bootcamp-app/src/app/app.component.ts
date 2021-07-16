@@ -1,27 +1,29 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Album, IAlbum } from './albums/models';
+import { AlbumsService } from './albums/services/albums.service';
+import { first, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  public albums?: IAlbum[];
 
-  public album = {
-    title: 'The Dark Side of the Moon',
-    artist: 'Pink Floyd',
-    releaseDate: new Date(1973, 3, 24),
-    coverArt:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Optical-dispersion_%281%29.png/390px-Optical-dispersion_%281%29.png',
-    tracks: [
-      { order: 1, title: 'Speak to Me' },
-      { order: 2, title: 'Breathe' },
-      { order: 3, title: 'On the Run' },
-      { order: 4, title: 'Time' },
-      { order: 5, title: 'The Great Gig in the Sky' },
-    ],
-  };
+  public constructor(private albumsService: AlbumsService) {}
+
+  public async ngOnInit(): Promise<void> {
+    this.albums = await this.getAlbums();
+  }
+
+  private getAlbums(): Promise<IAlbum[]> {
+    return this.albumsService
+      .getAlbums()
+      .pipe(
+        map((result) => result.map(Album.fromResponse)),
+        first()
+      )
+      .toPromise();
+  }
 }
-
-
