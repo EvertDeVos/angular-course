@@ -6,6 +6,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AlbumComponent } from './components';
 import { DetailComponent, OverviewComponent } from './pages';
 import { AlbumsService } from './services/albums.service';
+import { SharedModule } from '../shared/shared.module';
+
 
 const albumRoutes: Routes = [
   { path: '', component: OverviewComponent, pathMatch: 'full' },
@@ -17,9 +19,12 @@ const albumRoutes: Routes = [
   providers: [AlbumsService],
   imports: [
     CommonModule,
+    SharedModule,
     FormsModule,
     HttpClientModule,
     RouterModule.forChild(albumRoutes),
+    SharedModule,
   ],
 })
 export class AlbumsModule {}
+
