@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DetailComponent, OverviewComponent } from './albums/pages';
 
 const routes: Routes = [
-  { path: 'albums/:id', component: DetailComponent },
-  { path: 'albums', component: OverviewComponent },
+  { path: 'albums', loadChildren: () => import('./albums/albums.module').then(m => m.AlbumsModule) },
   { path: '', redirectTo: 'albums', pathMatch: 'full' },
   { path: '**', redirectTo: 'albums' },
 ];

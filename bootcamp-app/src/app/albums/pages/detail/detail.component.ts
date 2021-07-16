@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
   ActivatedRoute,
-  ActivatedRouteSnapshot,
   Router,
 } from '@angular/router';
 import { EMPTY } from 'rxjs';

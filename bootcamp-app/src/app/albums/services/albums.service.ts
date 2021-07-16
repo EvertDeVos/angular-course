@@ -5,9 +5,7 @@ import { Observable } from 'rxjs';
 import { IAlbumResponse } from '../models';
 
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class AlbumsService {
 
   private baseUrl = `${environment.apiUrl}/albums`;
